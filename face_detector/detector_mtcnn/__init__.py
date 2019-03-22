@@ -1,6 +1,10 @@
 import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+
 from face_detector.detector_mtcnn import mtcnn_aux as aux
 import tensorflow as tf
+tf.logging.set_verbosity(tf.logging.ERROR)
+from face_detector import Face, BoundingBox, LandmarkPoint
 
 class MTCNNDetector:
 
@@ -25,7 +29,6 @@ class MTCNNDetector:
 
 
     def find_faces(self, img):
-        from face_detector import Face, BoundingBox, LandmarkPoint
         faces = []
         with self.graph.as_default():
             with self.sess.as_default():
