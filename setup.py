@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
      name='face_detector',
-     version='0.1',
+     version='0.2',
      scripts=['scripts/zlib_install'] ,
      author="Luis Rojas Aguilera",
      author_email="rojas@icomp.ufam.edu.br",
