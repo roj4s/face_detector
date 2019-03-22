@@ -52,8 +52,9 @@ class FaceDetector:
         self.technique = technique
         self.model_addr = model_addr
 
-    def find_one_face(self, img) -> Face:
+    def get_main_face(self, img_addr) -> Face:
         noface = Face(BoundingBox(0,0,0,0), [])
+        img = cv2.imread(img_addr)
         faces = self.detector.find_faces(img)
         bb_f = np.array([(f.bounding_box.x, f.bounding_box.y, f.bounding_box.w,
                           f.bounding_box.h) for f in faces])
@@ -68,7 +69,7 @@ class FaceDetector:
             offsets = np.vstack([ (bb_f[:,0]+bb_f[:,2])/2-img_center[1], (bb_f[:,1]+bb_f[:,3])/2-img_center[0] ])
             offset_dist_squared = np.sum(np.power(offsets,2.0),0)
             index = np.argmax(bounding_box_size-offset_dist_squared*2.0)
-            return faces[index].bounding_box
+            return faces[index]
 
         return noface
 
