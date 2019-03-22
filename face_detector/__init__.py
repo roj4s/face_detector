@@ -5,6 +5,7 @@ from typing import List
 import cv2
 
 
+
 class BoundingBox:
 
     def __init__(self, x: float, y: float, w: float, h: float):
@@ -17,6 +18,7 @@ class BoundingBox:
 class Face:
 
     def __init__(self, bounding_box: BoundingBox, landmarks: dict=None):
+
         self.bounding_box = bounding_box
         self.landmarks = landmarks
 
@@ -24,16 +26,22 @@ class Face:
 class FaceDetector:
 
     def __init__(self, technique: str='mtcnn', model_addr: str=None, config: dict=None):
-        from detector_dlib import DlibDetector
-        from detector_mtcnn import MTCNNDetector
-        self.techniques = {'mtcnn': partial(MTCNNDetector, 'data/mtcnn' if model_addr is
+        from face_detector.detector_mtcnn import MTCNNDetector
+        from face_detector.detector_dlib import DlibDetector
+
+        root_addr = os.path.dirname(__file__)
+        self.techniques = {'mtcnn': partial(MTCNNDetector,
+                                            os.path.join(root_addr, 'data',
+                                                         'mtcnn') if model_addr is
                                                         None else
                                                          model_addr, config),
                                    'dlib_68': partial(DlibDetector,
-                                                    'data/shape_predictor_68_face_landmarks.dat',
+                                                      os.path.join(root_addr,
+                                                                   'data', 'shape_predictor_68_face_landmarks.dat'),
                                                    config),
                                    'dlib_5': partial(DlibDetector,
-                                                   'data/shape_predictor_5_face_landmarks.dat',
+                                                     os.path.join(root_addr,'data',
+                                                                  'shape_predictor_5_face_landmarks.dat'),
                                                   config)}
 
         if technique not in self.techniques:
