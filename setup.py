@@ -8,8 +8,8 @@ with open('requirements.txt', 'rt') as f:
 
 setuptools.setup(
      name='face_detector',
-     version='0.2.1',
-     scripts=['scripts/zlib_install'] ,
+     version='0.2.2',
+     scripts=['scripts/zlib_install'],
      author="Luis Rojas Aguilera",
      author_email="rojas@icomp.ufam.edu.br",
      description="State-of-the-art face detection and landmarks localization",
@@ -17,6 +17,7 @@ setuptools.setup(
      long_description_content_type="text/markdown",
      url="https://github.com/roj4s/face_detector",
      packages=setuptools.find_packages(),
+     include_package_data=True,
      install_requires=dependencies,
      classifiers=[
          "Programming Language :: Python :: 3",

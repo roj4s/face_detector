@@ -1,0 +1,3 @@
+include face_detector/data/*.dat
+include face_detector/data/zlib-1.2.9.tar.gz
+include face_detector/data/mtcnn/*.npy
