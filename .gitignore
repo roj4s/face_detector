@@ -1,0 +1,12 @@
+*.swp
+*.swo
+__pycache__
+*.pyc
+*.pkl
+*.hdf
+.idea
+build/
+dist/
+*.egg-info/
+
+
