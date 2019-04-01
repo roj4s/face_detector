@@ -1,0 +1,38 @@
+import cv2
+import face_detector as fd
+import argparse as ap
+
+def main(image_path, output_path=None, main_face=False, method='mtcnn'):
+    detector = fd.FaceDetector(method)
+    faces = []
+    if main_face:
+        f = detector.get_main_face(image_path)
+        if f is not None:
+            faces = [f]
+    else:
+        faces = detector.get_faces(image_path)
+
+    img = cv2.imread(image_path)
+    for f in faces:
+        bb = f.bounding_box
+        cv2.rectangle(img, (int(bb.x), int(bb.y)), (int(bb.x+bb.w)
+                                                        , int(bb.y + bb.h)),
+                          (0,255,0), 2)
+
+    cv2.imshow('detection', img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+    if output_path is not None:
+        cv2.imwrite(output_path, img)
+
+
+if __name__ == "__main__":
+    par = ap.ArgumentParser(add_help=True)
+    par.add_argument('image', type=str, help="Absolute path to image")
+    par.add_argument('-j', '--only-main-face', help="Flag. If specified only main face will be returned", action='store_true')
+    par.add_argument('-m', '--method', type=str, help="Method can be mtcnn or dlib_5 to switch between mtcnn and dlib. Default is dlib", choices=['mtcnn',
+                                                                      'dlib_5'],
+                    default='dlib_5')
+    par.add_argument('-o', '--output', type=str, help="Absolute path (including file name and format) to where the resulting image will be stored")
+    args = vars(par.parse_args())
+    main(args['image'], args['output'], args['only_main_face'], args['method'])
