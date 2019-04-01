@@ -7,7 +7,7 @@ FaceDetector class instantiation (mtcnn is default if no technique is
 specified, use fl\_5 for dlib with 5 landmarks and fl\_68 for dlib with 68
 landmarks).
 
-#How to Install:
+## How to Install:
 
     pip install face-detector
 
@@ -39,6 +39,7 @@ landmarks).
         cv2.waitKey(0)
         cv2.destroyAllWindows()
 
+<!--
 [//]: <> - From Github:
 [//]: <>    - Clone this repository
 [//]: <>    - Install dependencies in requirements.txt:
@@ -50,3 +51,4 @@ landmarks).
 [//]: <>         foo@bar:~/face_detector/data/zlib$ sudo ./configure && make && make install
 [//]: <>         foo@bar:~/face_detector/data/zlib$ ln -s /lib/x86_64-linux-gnu/libz.so.1.2.8 /usr/lib/x86_64-linux-gnu/libz.so
 [//]: <>        ```
+-->
