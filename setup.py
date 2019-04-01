@@ -8,7 +8,7 @@ with open('requirements.txt', 'rt') as f:
 
 setuptools.setup(
      name='face_detector',
-     version='0.2.2',
+     version='0.2.3',
      scripts=['scripts/zlib_install'],
      author="Luis Rojas Aguilera",
      author_email="rojas@icomp.ufam.edu.br",
