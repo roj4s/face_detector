@@ -52,7 +52,7 @@ The previous command will display the image passed in arguments with a bounding 
 </div>
 
 <div align='left'>
-<img  src='samples/Yasser_Arafat_main_face.jpg' align='left'/>
+<img  src='samples/Yasser_Arafat_main_face.jpg'/>
 <p>Fig. 2 Main face in photo, outputted by facedetector using -j option</p>
 </div>
 
