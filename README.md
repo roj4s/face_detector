@@ -1,17 +1,17 @@
 # Face Detector
 
-This python package provides state-of-the-art face detection as well as face
+Python package and Command Line Tool for state-of-the-art face detection and face
 landmark points localization. It gathers the techniques implemented in dlib and
-mtcnn[], which can be easily switched between by setting a parameter in the
-FaceDetector class instantiation (mtcnn is default if no technique is
-specified, use fl\_5 for dlib with 5 landmarks and fl\_68 for dlib with 68
+mtcnn, which can be easily switched between by setting a parameter in the
+FaceDetector class instantiation (dlib\_5 is default if no technique is
+specified, use dlib\_5 for dlib with 5 landmarks and dlib\_68 for dlib with 68
 landmarks).
 
 ## How to Install:
 
     pip install face-detector
 
-## How to Use:
+## How to Use python package:
 
     from face_detector import FaceDetector
 
@@ -38,6 +38,17 @@ landmarks).
         cv2.imshow('img', img)
         cv2.waitKey(0)
         cv2.destroyAllWindows()
+
+## How to use Command Line Tool
+
+    ```console
+        foo@bar:~$ facedetector /home/foo/images/Yasser_Arafat.jpg
+    ```
+    The previous command will display the image passed in arguments with a bounding box wrapping every face in the image. e.g:
+<img src="samples/Yasser_Arafat_main_face.jpg"
+         alt="Sample output with two faces"
+         style="float: left; margin-right: 10px;" />
+
 
 <!--
 [//]: <> - From Github:
