@@ -1,4 +1,4 @@
-# Face Detector
+## Face Detector
 
 Python package and Command Line Tool for state-of-the-art face detection and face
 landmark points localization. It gathers the techniques implemented in dlib and
@@ -47,7 +47,7 @@ landmarks).
 The previous command will display the image passed in arguments with a bounding box wrapping every face in the image. Fig. 1 shows the image displayed.
 
 <div align='left' style="display:inline-block; text-align:center; word-wrap: break-word;">
-<img src='samples/Yasser_Arafat_2_faces.jpg' /> <p>Fig. 1 Face detections as outputted by facedetector command line tool</p>
+<img src='https://raw.githubusercontent.com/roj4s/face_detector/master/samples/Yasser_Arafat_2_faces.jpg' /> <p>Fig. 1 Face detections as outputted by facedetector command line tool</p>
 </div>
 
 <!--
@@ -56,7 +56,7 @@ The previous command will display the image passed in arguments with a bounding 
 </div>
 -->
 <div align='left' style="margin-left:10px; display:inline-block; text-align:center; word-wrap: break-word;">
-<img  src='samples/Yasser_Arafat_landmarks.jpg'/> <p>Fig. 2 Face detections and landmarks as outputted by facedetector with -l (--landmarks) and -j (--only-main-face) options</p>
+<img  src='https://raw.githubusercontent.com/roj4s/face_detector/master/samples/Yasser_Arafat_landmarks.jpg'/> <p>Fig. 2 Face detections and landmarks as outputted by facedetector with -l (--landmarks) and -j (--only-main-face) options</p>
 </div>
 
 
