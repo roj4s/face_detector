@@ -41,10 +41,10 @@ landmarks).
 
 ## How to use Command Line Tool
 
-    ```console
-        foo@bar:~$ facedetector /home/foo/images/Yasser_Arafat.jpg
-    ```
-    The previous command will display the image passed in arguments with a bounding box wrapping every face in the image. e.g:
+```console
+    foo@bar:~$ facedetector /home/foo/images/Yasser_Arafat.jpg
+```
+The previous command will display the image passed in arguments with a bounding box wrapping every face in the image. e.g:
 <img src="samples/Yasser_Arafat_main_face.jpg"
          alt="Sample output with two faces"
          style="float: left; margin-right: 10px;" />
