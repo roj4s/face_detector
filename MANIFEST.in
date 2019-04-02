@@ -1,3 +1,5 @@
 include face_detector/data/shape_predictor_5_face_landmarks.dat
 include face_detector/data/zlib-1.2.9.tar.gz
 include face_detector/data/mtcnn/*.npy
+include samples/Yasser_Arafat_2_faces.jpg
+include samples/Yasser_Arafat_main_face.jpg
