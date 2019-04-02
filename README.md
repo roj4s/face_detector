@@ -46,21 +46,25 @@ landmarks).
 ```
 The previous command will display the image passed in arguments with a bounding box wrapping every face in the image. Fig. 1 shows the image displayed.
 
-<div align='left' style="display:inline">
-<img src='samples/Yasser_Arafat_2_faces.jpg' />
-<p>Fig. 1 Face detections as outputted by facedetector command line tool</p>
+<div align='left' style="display:inline-block; text-align:center; word-wrap: break-word;">
+<img src='samples/Yasser_Arafat_2_faces.jpg' /> <p>Fig. 1 Face detections as outputted by facedetector command line tool</p>
 </div>
 
-<div align='left' style='display:inline'>
-<img  src='samples/Yasser_Arafat_main_face.jpg'/>
-<p>Fig. 2 Main face in photo, outputted by facedetector using -j option</p>
+<!--
+<div align='left' style="margin-left:10px; display:inline-block; text-align:center; word-wrap: break-word;">
+<img  src='samples/Yasser_Arafat_main_face.jpg'/> <p>Fig. 3 Main face in photo, outputted by facedetector using -j option</p>
 </div>
+-->
+<div align='left' style="margin-left:10px; display:inline-block; text-align:center; word-wrap: break-word;">
+<img  src='samples/Yasser_Arafat_landmarks.jpg'/> <p>Fig. 2 Face detections and landmarks as outputted by facedetector with -l (--landmarks) and -j (--only-main-face) options</p>
+</div>
+
 
 ```console
-    foo@bar:~$ facedetector /home/foo/images/Yasser_Arafat.jpg -j -o /tmp/output.jpg
+    foo@bar:~$ facedetector /home/foo/images/Yasser_Arafat.jpg -j -o /tmp/output.jpg -l
 ```
-The previous command adds -j and -o options, which capture the main
-face in the photo and output the image with bounding boxes to the
+The previous command adds -j, -l and -o options, which capture the main
+face in the photo, adds landmark points and output the image with bounding boxes to the
 specified path, respectivelly. It also display the image in Fig. 2.
 
 
