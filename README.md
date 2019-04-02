@@ -48,12 +48,12 @@ The previous command will display the image passed in arguments with a bounding 
 
 <div align='left'>
 <img src='samples/Yasser_Arafat_2_faces.jpg' />
-Fig. 1 Face detections as outputted by facedetector command line tool
+<p>Fig. 1 Face detections as outputted by facedetector command line tool</p>
 </div>
 
 <div align='left'>
 <img  src='samples/Yasser_Arafat_main_face.jpg' align='left'/>
-Fig. 2 Main face in photo, outputted by facedetector using -j option
+<p>Fig. 2 Main face in photo, outputted by facedetector using -j option</p>
 </div>
 
 ```console
