@@ -46,12 +46,12 @@ landmarks).
 ```
 The previous command will display the image passed in arguments with a bounding box wrapping every face in the image. Fig. 1 shows the image displayed.
 
-<div align='left'>
+<div align='left' style="display:inline">
 <img src='samples/Yasser_Arafat_2_faces.jpg' />
 <p>Fig. 1 Face detections as outputted by facedetector command line tool</p>
 </div>
 
-<div align='left'>
+<div align='left' style='display:inline'>
 <img  src='samples/Yasser_Arafat_main_face.jpg'/>
 <p>Fig. 2 Main face in photo, outputted by facedetector using -j option</p>
 </div>
