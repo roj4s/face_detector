@@ -53,8 +53,21 @@ class FaceDetector:
         self.model_addr = model_addr
 
     def get_main_face(self, img_addr) -> Face:
-        noface = Face(BoundingBox(0,0,0,0), [])
         img = cv2.imread(img_addr)
+        return self.get_main_face_from_img(img)
+
+    def get_faces(self, img_addr) -> List[Face]:
+        if not os.path.exists(img_addr):
+            return []
+
+        img = cv2.imread(img_addr)
+        return self.get_faces_from_img(img)
+
+    def get_faces_from_img(self, img):
+        return self.detector.find_faces(img)
+
+    def get_main_face_from_img(self, img):
+        noface = Face(BoundingBox(0,0,0,0), [])
         faces = self.detector.find_faces(img)
         bb_f = np.array([(f.bounding_box.x, f.bounding_box.y, f.bounding_box.w,
                           f.bounding_box.h) for f in faces])
@@ -73,12 +86,6 @@ class FaceDetector:
 
         return noface
 
-    def get_faces(self, img_addr) -> List[Face]:
-        if not os.path.exists(img_addr):
-            return []
-
-        img = cv2.imread(img_addr)
-        return self.detector.find_faces(img)
 
 
 class LandmarkPoint:
