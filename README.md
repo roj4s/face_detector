@@ -9,6 +9,10 @@ landmarks).
 
 ## How to Install:
 
+ First install C compiler:
+    sudo apt-get install cmake, g++
+
+ Then this package:
     pip install face-detector
 
 ## How to Use python package:
