@@ -1,6 +1,6 @@
 import setuptools
 
-with open("README.md", "r") as fh:
+with open("README.md", "rt") as fh:
     long_description = fh.read()
 
 with open('requirements.txt', 'rt') as f:
@@ -8,7 +8,7 @@ with open('requirements.txt', 'rt') as f:
 
 setuptools.setup(
      name='face_detector',
-     version='0.3',
+     version='0.4',
      scripts=['scripts/facedetector'],
      author="Luis Rojas Aguilera",
      author_email="rojas@icomp.ufam.edu.br",
